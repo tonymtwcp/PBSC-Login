@@ -70,7 +70,10 @@ const doFirst = () => {
       setFormStyle(imageSrc, imageRatio);
     };
 
-    document.documentElement.style.setProperty('--doc-height', `${screenHeight}px`);
+    document.documentElement.style.setProperty(
+      '--doc-height',
+      `${screenHeight}px`
+    );
   };
 
   const showError = (message) => {
@@ -134,6 +137,7 @@ const doFirst = () => {
   handleResize();
   window.addEventListener('resize', handleResize);
   window.addEventListener('orientationchange', handleResize);
+  window.addEventListener('touchmove', handleResize);
 };
 
 window.addEventListener('load', doFirst);
