@@ -69,6 +69,8 @@ const doFirst = () => {
 
       setFormStyle(imageSrc, imageRatio);
     };
+
+    document.documentElement.style.setProperty('--doc-height', `${screenHeight}px`);
   };
 
   const showError = (message) => {
@@ -128,19 +130,6 @@ const doFirst = () => {
   formBox.addEventListener('submit', (e) => {
     e.preventDefault();
   });
-
-  const doc = document.documentElement;
-  const originalDocHeight = parseFloat(
-    getComputedStyle(doc).getPropertyValue('--doc-height')
-  );
-
-  function handleViewportScaleChange() {
-    const currentScale = window.innerWidth / window.screen.width;
-    const adjustedDocHeight = originalDocHeight / currentScale;
-    doc.style.setProperty('--doc-height', `${adjustedDocHeight}px`);
-  }
-
-  window.addEventListener('resize', handleViewportScaleChange);
 
   handleResize();
   window.addEventListener('resize', handleResize);
