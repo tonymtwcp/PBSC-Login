@@ -38,6 +38,7 @@ body {
 }
 
 .input-field {
+  padding: 0 2px;
   background: transparent;
   text-align: center;
   border: none;
@@ -53,11 +54,11 @@ body {
 }
 
 .input-field:hover {
-  box-shadow: 0 3px 0 #000;
+  box-shadow: -1px 3px -1px #000;
 }
 
 .input-field:focus:hover {
-  box-shadow: 0 3px 0 #000;
+  box-shadow: -1px 3px -1px #000;
 }
 
 .login-btn {
