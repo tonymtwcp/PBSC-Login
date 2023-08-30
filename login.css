@@ -1,6 +1,6 @@
-/* :root {
+:root {
   --doc-height: 100%;
-} */
+}
 
 * {
   box-sizing: border-box;
@@ -17,7 +17,7 @@ body {
   display: flex;
   align-items: start;
   height: 100vh;
-  /* height: var(--doc-height); */
+  height: var(--doc-height);
 }
 
 .bg-img {

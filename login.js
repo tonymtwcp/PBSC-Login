@@ -70,7 +70,7 @@ const doFirst = () => {
       setFormStyle(imageSrc, imageRatio);
     };
 
-    // document.documentElement.style.setProperty('--doc-height', `${screenHeight}px`);
+    document.documentElement.style.setProperty('--doc-height', `${screenHeight}px`);
   };
 
   const showError = (message) => {
