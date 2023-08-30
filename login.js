@@ -21,6 +21,7 @@ const doFirst = () => {
   const accountInput = document.querySelector('#account');
   const passwordInput = document.querySelector('#password');
   const loginBtn = document.querySelector('#login-btn');
+  const errorMessage = document.querySelector('#error-message');
 
   const setFormStyle = (imageSrc, imageRatio) => {
     const formStyle = formStyles[imageSrc];
@@ -71,7 +72,6 @@ const doFirst = () => {
   };
 
   const showError = (message) => {
-    const errorMessage = document.querySelector('#error-message');
     let errorMessageTimeout;
 
     if (!errorMessage) {
