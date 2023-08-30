@@ -70,8 +70,17 @@ const doFirst = () => {
       setFormStyle(imageSrc, imageRatio);
     };
 
-    const doc = document.documentElement;
-    doc.style.setProperty('--doc-height', `${screenHeight}px`);
+    const originalDocHeight = parseFloat(
+      getComputedStyle(document.documentElement).getPropertyValue(
+        '--doc-height'
+      )
+    );
+    const currentScale = window.innerWidth / window.screen.width;
+    const adjustedDocHeight = originalDocHeight / currentScale;
+    document.documentElement.style.setProperty(
+      '--doc-height',
+      `${adjustedDocHeight}px`
+    );
   };
 
   const showError = (message) => {
@@ -134,10 +143,7 @@ const doFirst = () => {
 
   handleResize();
   window.addEventListener('resize', handleResize);
-  window.addEventListener('orientationchange', () => {
-    window.location.reload();
-    handleResize();
-  });
+  window.addEventListener('orientationchange', handleResize);
 };
 
 window.addEventListener('load', doFirst);
