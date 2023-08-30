@@ -1,12 +1,12 @@
 const formStyles = {
   './images/test-169.jpg': {
-    formBoxStyle: { width: 273, height: 339 },
+    formBoxStyle: { width: 17, height: 21.2 },
     inputBoxStyle: { height: 80, marginLeft: 60, marginBottom: 21 },
     inputFieldStyle: { width: 166, height: 28, fontSize: 16 },
     loginBtnStyle: { width: 90, height: 45 },
   },
   './images/test-43.jpg': {
-    formBoxStyle: { width: 218, height: 335 },
+    formBoxStyle: { width: 13.6, height: 21 },
     inputBoxStyle: { height: 80, marginLeft: 45, marginBottom: 23 },
     inputFieldStyle: { width: 118, height: 28 },
     loginBtnStyle: { width: 68, height: 39 },
@@ -30,8 +30,8 @@ const doFirst = () => {
         formStyle;
 
       formBox.style.transform = `scale(${imageRatio})`;
-      formBox.style.width = `${formBoxStyle.width}px`;
-      formBox.style.height = `${formBoxStyle.height}px`;
+      formBox.style.width = `${formBoxStyle.width}rem`;
+      formBox.style.height = `${formBoxStyle.height}rem`;
       inputBox.style.height = `${inputBoxStyle.height}px`;
       inputBox.style.marginLeft = `${inputBoxStyle.marginLeft}px`;
       inputBox.style.marginBottom = `${inputBoxStyle.marginBottom}px`;

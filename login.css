@@ -23,7 +23,7 @@ body {
 }
 
 .form-box {
-  /* background: rgba(0, 0, 0, 0.5); */
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
   right: 0;
@@ -42,10 +42,11 @@ body {
 }
 
 .input-field {
-  background: transparent;
+  /* background: transparent; */
   text-align: center;
   border: none;
   font-size: 18px;
+  box-shadow: none;
   font-weight: 600;
 }
 
@@ -61,8 +62,8 @@ body {
 }
 
 .login-btn {
-  /* background: rgba(255, 0, 0, 0.5); */
-  background: transparent;
+  background: rgba(255, 0, 0, 0.5);
+  /* background: transparent; */
   border: none;
   cursor: pointer;
 }
