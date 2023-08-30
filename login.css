@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.login-page {
+  overflow-y: hidden;
+  position: relative;
+  display: flex;
+  align-items: start;
+  height: 100vh;
+}
+
+.bg-img {
+  object-fit: cover;
+  object-position: top right;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.form-box {
+  /* background: rgba(0, 0, 0, 0.5); */
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform-origin: top right;
+}
+
+.form-position {
+  position: absolute;
+  bottom: 0;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input-field {
+  background: transparent;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: none;
+  transition: box-shadow 0.2s;
+}
+
+.input-field:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.input-field:hover {
+  box-shadow: 0 3px 0 #000;
+}
+
+.input-field:focus:hover {
+  box-shadow: 0 3px 0 #000;
+}
+
+.login-btn {
+  /* background: rgba(255, 0, 0, 0.5); */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.error-message {
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  background: rgb(250, 215, 218);
+  color: rgb(91, 20, 29);
+  border-radius: 3px;
+  position: absolute;
+  right: 10%;
+  bottom: 70%;
+  transition: 0.1s;
+  width: 0;
+}
+
+.error-message.active {
+  border: 1px solid rgb(245, 174, 128);
+  padding: 20px;
+  width: auto;
+}
