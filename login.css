@@ -96,3 +96,9 @@ body {
   padding: 20px;
   width: auto;
 }
+
+@media screen and (max-width: 768px) {
+  .input-field:focus:hover {
+    border: none;
+  }
+}
