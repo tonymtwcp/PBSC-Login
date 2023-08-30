@@ -1,14 +1,14 @@
 const formStyles = {
   './images/test-169.jpg': {
-    formBoxStyle: { width: 273, height: 336 },
-    inputBoxStyle: { height: 82, marginLeft: 60, marginBottom: 18 },
-    inputFieldStyle: { width: 164, height: 28 },
+    formBoxStyle: { width: 273, height: 339 },
+    inputBoxStyle: { height: 80, marginLeft: 60, marginBottom: 21 },
+    inputFieldStyle: { width: 166, height: 28, fontSize: 16 },
     loginBtnStyle: { width: 90, height: 45 },
   },
   './images/test-43.jpg': {
     formBoxStyle: { width: 218, height: 335 },
-    inputBoxStyle: { height: 82, marginLeft: 45, marginBottom: 23 },
-    inputFieldStyle: { width: 116, height: 28 },
+    inputBoxStyle: { height: 80, marginLeft: 45, marginBottom: 23 },
+    inputFieldStyle: { width: 118, height: 28 },
     loginBtnStyle: { width: 68, height: 39 },
   },
 };

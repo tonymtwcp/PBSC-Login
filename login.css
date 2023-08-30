@@ -1,10 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
 }
 
 .login-page {
-  overflow-y: hidden;
+  overflow: hidden;
   position: relative;
   display: flex;
   align-items: start;
@@ -38,27 +42,20 @@ body {
 }
 
 .input-field {
-  padding: 0 2px;
   background: transparent;
   text-align: center;
   border: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  box-shadow: none;
-  transition: box-shadow 0.2s;
 }
 
 .input-field:focus {
   outline: none;
-  box-shadow: none;
 }
 
-.input-field:hover {
-  box-shadow: -1px 3px -1px #000;
-}
-
+.input-field:hover,
 .input-field:focus:hover {
-  box-shadow: -1px 3px -1px #000;
+  border-bottom: 3px solid #000;
 }
 
 .login-btn {
