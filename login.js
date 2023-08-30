@@ -62,7 +62,7 @@ const doFirst = () => {
       const imageWidth = imageElement.naturalWidth;
       const imageHeight = imageElement.naturalHeight;
 
-      const shouldUseMin = scrollHeight > screenHeight && screenRatio > 1;
+      const shouldUseMin = scrollHeight > screenHeight;
       const imageRatio = shouldUseMin
         ? Math.min(screenWidth / imageWidth, scrollHeight / imageHeight)
         : Math.max(screenWidth / imageWidth, scrollHeight / imageHeight);
