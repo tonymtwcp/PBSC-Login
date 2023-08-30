@@ -51,6 +51,7 @@ body {
 
 .input-field:focus {
   outline: none;
+  border: none;
 }
 
 .input-field:hover,
