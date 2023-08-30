@@ -69,6 +69,9 @@ const doFirst = () => {
 
       setFormStyle(imageSrc, imageRatio);
     };
+
+    const doc = document.documentElement;
+    doc.style.setProperty('--doc-height', `${screenHeight}px`);
   };
 
   const showError = (message) => {
