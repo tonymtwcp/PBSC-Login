@@ -134,6 +134,10 @@ const doFirst = () => {
 
   handleResize();
   window.addEventListener('resize', handleResize);
+  window.addEventListener('orientationchange', () => {
+    window.location.reload();
+    handleResize();
+  });
 };
 
 window.addEventListener('load', doFirst);
