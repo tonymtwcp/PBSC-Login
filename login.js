@@ -22,6 +22,7 @@ const initialize = () => {
   const passwordInput = document.querySelector("#password-input");
   const loginBtn = document.querySelector("#login-btn");
   const errorMessage = document.querySelector("#error-message");
+  let imageRatioInitialized = false;
   let errorMessageTimeout;
 
   const setFormStyle = (imageSrc, imageRatio) => {
@@ -54,6 +55,11 @@ const initialize = () => {
   };
 
   const handleResize = () => {
+    const isSafariMobile =
+      /iPhone|iPad|iPod/i.test(navigator.userAgent) &&
+      /Safari/i.test(navigator.userAgent);
+    if (isSafariMobile && imageRatioInitialized) return;
+
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
     const screenRatio = screenWidth / screenHeight;
@@ -75,6 +81,7 @@ const initialize = () => {
         : Math.max(screenWidth / imageWidth, scrollHeight / imageHeight);
 
       setFormStyle(imageSrc, imageRatio);
+      imageRatioInitialized = true;
     };
 
     document.documentElement.style.setProperty(
