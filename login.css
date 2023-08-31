@@ -16,7 +16,7 @@ body {
   height: var(--doc-height);
   position: relative;
   /* overflow: hidden; */
-  touch-action: none;
+  touch-action: pan-y;
   display: flex;
   align-items: start;
 }
