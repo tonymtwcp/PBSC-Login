@@ -138,6 +138,9 @@ const doFirst = () => {
   handleResize();
   window.addEventListener("resize", handleResize);
   window.addEventListener("orientationchange", handleResize);
+  window.addEventListener("touchstart", function (event) {
+    event.preventDefault();
+  });
 };
 
 window.addEventListener("load", doFirst);
