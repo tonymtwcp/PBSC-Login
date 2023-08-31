@@ -63,11 +63,8 @@ body {
   box-shadow: none;
 }
 
+.input-field:focus:hover,
 .input-field:hover {
-  border-bottom: 3px solid #000;
-}
-
-.input-field:focus:hover {
   border-bottom: 3px solid #000;
 }
 
@@ -99,11 +96,8 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .input-field:focus:hover {
-    border: none;
-  }
-
-  .input-field {
+  .input-field:focus:hover,
+  .input-field:hover {
     border: none;
   }
 }
