@@ -147,7 +147,10 @@ const initialize = () => {
 
   handleResize();
   window.addEventListener("resize", handleResize);
-  window.addEventListener("orientationchange", handleResize);
+  window.addEventListener("orientationchange", () => {
+    imageRatioInitialized = false;
+    handleResize;
+  });
 };
 
 window.addEventListener("load", initialize);
