@@ -13,7 +13,7 @@ body {
 
 .login-page {
   height: 100vh;
-  height: -webkit-fill-available;
+  height: var(--doc-height);
   position: relative;
   /* overflow: hidden; */
   touch-action: pan-y;
