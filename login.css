@@ -12,6 +12,7 @@ body {
 }
 
 .login-page {
+  touch-action: none;
   overflow: hidden;
   position: relative;
   display: flex;
