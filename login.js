@@ -1,11 +1,11 @@
 const formStyles = {
-  "./images/test-169.jpg": {
+  "./images/PBSC-169.jpg": {
     formBoxStyle: { width: 17, height: 21.2 },
     inputBoxStyle: { height: 80, marginLeft: 60, marginBottom: 21 },
     inputFieldStyle: { width: 166, height: 28, fontSize: 16 },
     loginBtnStyle: { width: 90, height: 45 },
   },
-  "./images/test-43.jpg": {
+  "./images/PBSC-43.jpg": {
     formBoxStyle: { width: 13.6, height: 21 },
     inputBoxStyle: { height: 80, marginLeft: 45, marginBottom: 25 },
     inputFieldStyle: { width: 118, height: 28 },
@@ -53,8 +53,8 @@ const doFirst = () => {
 
     const imageSrc =
       screenRatio > 1.9 || screenRatio < 1
-        ? "./images/test-169.jpg"
-        : "./images/test-43.jpg";
+        ? "./images/PBSC-169.jpg"
+        : "./images/PBSC-43.jpg";
     imageElement.src = imageSrc;
 
     imageElement.onload = () => {
