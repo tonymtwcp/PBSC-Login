@@ -80,8 +80,10 @@ const initialize = () => {
         ? Math.min(screenWidth / imageWidth, scrollHeight / imageHeight)
         : Math.max(screenWidth / imageWidth, scrollHeight / imageHeight);
 
-      setFormStyle(imageSrc, imageRatio);
-      imageRatioInitialized = true;
+      if (!imageRatioInitialized) {
+        setFormStyle(imageSrc, imageRatio);
+        imageRatioInitialized = true;
+      }
     };
 
     document.documentElement.style.setProperty(
@@ -147,10 +149,7 @@ const initialize = () => {
 
   handleResize();
   window.addEventListener("resize", handleResize);
-  window.addEventListener("orientationchange", () => {
-    imageRatioInitialized = false;
-    handleResize;
-  });
+  window.addEventListener("orientationchange", handleResize);
 };
 
 window.addEventListener("load", initialize);
