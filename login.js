@@ -141,6 +141,8 @@ const doFirst = () => {
   window.addEventListener("touchmove", () => {
     accountInput.value = "";
     passwordInput.value = "";
+    accountInput.blur();
+    passwordInput.blur();
   });
 };
 
