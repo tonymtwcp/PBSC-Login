@@ -13,7 +13,7 @@ body {
 
 .login-page {
   height: 100vh;
-  /* height: var(--doc-height); */
+  height: var(--doc-height);
   position: relative;
   /* overflow: hidden; */
   touch-action: pan-y;
@@ -76,7 +76,7 @@ body {
   font-size: 0.8rem;
   white-space: nowrap;
   overflow: hidden;
-  background: rgb(250, 215, 218);
+  background: yellow;
   color: rgb(91, 20, 29);
   border-radius: 3px;
   position: absolute;
@@ -87,7 +87,7 @@ body {
 }
 
 .error-message.active {
-  border: 1px solid rgb(245, 174, 128);
+  border: 1px solid #fff;
   padding: 20px;
   width: auto;
 }
