@@ -60,6 +60,7 @@ body {
 .input-field:focus {
   outline: none;
   box-shadow: none;
+  border: none;
 }
 
 .input-field:hover {

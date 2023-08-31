@@ -89,6 +89,7 @@ const doFirst = () => {
     errorMessage.classList.add("active");
 
     clearTimeout(errorMessageTimeout);
+
     errorMessageTimeout = setTimeout(() => {
       errorMessage.textContent = "";
       errorMessage.classList.remove("active");
