@@ -138,8 +138,15 @@ const doFirst = () => {
   handleResize();
   window.addEventListener("resize", handleResize);
   window.addEventListener("orientationchange", handleResize);
-  window.addEventListener("touchstart", function (event) {
-    event.preventDefault();
+  window.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+  });
+
+  window.addEventListener("touchmove", () => {
+    formBox.style.diplay = "none";
+  });
+  window.addEventListener("touchend", () => {
+    formBox.style.diplay = "block";
   });
 };
 
