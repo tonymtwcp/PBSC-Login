@@ -4,21 +4,21 @@
 
 * {
   box-sizing: border-box;
+  font-family: "Arial", sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: "Arial", sans-serif;
 }
 
 .login-page {
-  touch-action: none;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: start;
   height: 100vh;
   height: var(--doc-height);
+  position: relative;
+  overflow: hidden;
+  touch-action: none;
+  display: flex;
+  align-items: start;
 }
 
 .bg-img {
@@ -100,6 +100,10 @@ body {
 
 @media screen and (max-width: 768px) {
   .input-field:focus:hover {
+    border: none;
+  }
+
+  .input-field {
     border: none;
   }
 }
