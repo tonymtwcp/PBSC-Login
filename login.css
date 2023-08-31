@@ -60,7 +60,6 @@ body {
 .input-field:focus {
   outline: none;
   box-shadow: none;
-  border: none;
 }
 
 .input-field:hover {
@@ -95,6 +94,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .input-field,
   .input-field:hover {
     border: none;
   }

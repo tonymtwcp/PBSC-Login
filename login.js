@@ -7,7 +7,7 @@ const formStyles = {
   },
   "./images/test-43.jpg": {
     formBoxStyle: { width: 13.6, height: 21 },
-    inputBoxStyle: { height: 80, marginLeft: 45, marginBottom: 23 },
+    inputBoxStyle: { height: 80, marginLeft: 45, marginBottom: 25 },
     inputFieldStyle: { width: 118, height: 28 },
     loginBtnStyle: { width: 68, height: 39 },
   },
