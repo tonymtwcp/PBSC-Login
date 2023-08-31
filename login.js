@@ -140,16 +140,4 @@ const doFirst = () => {
   window.addEventListener("orientationchange", handleResize);
 };
 
-const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-if (isSafari) {
-  document.body.addEventListener(
-    "touchmove",
-    (e) => {
-      e.preventDefault();
-    },
-    { passive: false }
-  );
-}
-
 window.addEventListener("load", doFirst);
