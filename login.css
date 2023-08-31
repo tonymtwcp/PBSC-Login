@@ -28,7 +28,7 @@ body {
   min-width: 100%;
 }
 
-.form-box {
+.login-form {
   /* background: rgba(0, 0, 0, 0.5); */
   position: absolute;
   top: 0;
@@ -36,12 +36,12 @@ body {
   transform-origin: top right;
 }
 
-.form-position {
+.form-container {
   position: absolute;
   bottom: 0;
 }
 
-.input-box {
+.input-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -73,21 +73,19 @@ body {
 }
 
 .error-message {
-  font-size: 0.8rem;
   white-space: nowrap;
   overflow: hidden;
   background: yellow;
   color: rgb(91, 20, 29);
   border-radius: 3px;
   position: absolute;
-  right: 10%;
+  right: 30px;
   bottom: 70%;
   transition: 0.1s;
-  width: 0;
+  font-size: 14px;
 }
 
 .error-message.active {
   border: 1px solid #fff;
   padding: 20px;
-  width: auto;
 }
