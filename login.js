@@ -1,15 +1,15 @@
 const formStyles = {
   "./images/PBSC-169.jpg": {
-    LoginformStyle: { width: 17, height: 21.2 },
-    inputContainerStyle: { height: 80, marginLeft: 60, marginBottom: 21 },
-    inputFieldStyle: { width: 166, height: 28 },
-    loginBtnStyle: { width: 90, height: 45 },
+    LoginformStyle: { width: 381, height: 280 },
+    inputContainerStyle: { height: 118, marginLeft: 0, marginBottom: 6 },
+    inputFieldStyle: { width: 240, height: 35 },
+    loginBtnStyle: { width: 120, height: 60, marginLeft: 55 },
   },
   "./images/PBSC-43.jpg": {
-    LoginformStyle: { width: 13.6, height: 21 },
-    inputContainerStyle: { height: 80, marginLeft: 45, marginBottom: 25 },
-    inputFieldStyle: { width: 118, height: 28 },
-    loginBtnStyle: { width: 68, height: 39 },
+    LoginformStyle: { width: 285, height: 280 },
+    inputContainerStyle: { height: 118, marginLeft: 0, marginBottom: 5 },
+    inputFieldStyle: { width: 178, height: 35 },
+    loginBtnStyle: { width: 95, height: 60, marginLeft: 38 },
   },
 };
 
@@ -36,8 +36,8 @@ const initialize = () => {
 
       Loginform.style.transform = `scale(${imageRatio})`;
 
-      Loginform.style.width = `${LoginformStyle.width}rem`;
-      Loginform.style.height = `${LoginformStyle.height}rem`;
+      Loginform.style.width = `${LoginformStyle.width}px`;
+      Loginform.style.height = `${LoginformStyle.height}px`;
 
       inputContainer.style.height = `${inputContainerStyle.height}px`;
       inputContainer.style.marginLeft = `${inputContainerStyle.marginLeft}px`;
@@ -50,6 +50,7 @@ const initialize = () => {
 
       loginBtn.style.width = `${loginBtnStyle.width}px`;
       loginBtn.style.height = `${loginBtnStyle.height}px`;
+      loginBtn.style.marginLeft = `${loginBtnStyle.marginLeft}px`;
     }
   };
 
