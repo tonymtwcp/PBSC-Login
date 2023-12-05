@@ -73,19 +73,16 @@ body {
 }
 
 .error-message {
-  white-space: nowrap;
-  overflow: hidden;
-  background: yellow;
+  background: rgb(255, 255, 57);
   color: rgb(91, 20, 29);
-  border-radius: 3px;
+  border-radius: 2px;
   position: absolute;
   right: 30px;
-  bottom: 70%;
+  bottom: 80%;
   transition: 0.1s;
   font-size: 14px;
 }
 
 .error-message.active {
-  border: 1px solid #fff;
   padding: 20px;
 }
