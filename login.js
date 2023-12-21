@@ -1,15 +1,15 @@
 const formStyles = {
   "./images/PBSC-169.jpg": {
-    LoginformStyle: { width: 381, height: 280 },
-    inputContainerStyle: { height: 118, marginLeft: 0, marginBottom: 6 },
-    inputFieldStyle: { width: 240, height: 35 },
-    loginBtnStyle: { width: 120, height: 60, marginLeft: 55 },
+    LoginformStyle: { width: 388, height: 180 },
+    inputContainerStyle: { height: 103, marginLeft: 0, marginBottom: 4 },
+    inputFieldStyle: { width: 190, height: 30 },
+    loginBtnStyle: { width: 115, height: 50, marginLeft: 89 },
   },
   "./images/PBSC-43.jpg": {
-    LoginformStyle: { width: 285, height: 280 },
-    inputContainerStyle: { height: 118, marginLeft: 0, marginBottom: 5 },
-    inputFieldStyle: { width: 178, height: 35 },
-    loginBtnStyle: { width: 95, height: 60, marginLeft: 38 },
+    LoginformStyle: { width: 290, height: 180 },
+    inputContainerStyle: { height: 103, marginLeft: 0, marginBottom: 5 },
+    inputFieldStyle: { width: 142, height: 30 },
+    loginBtnStyle: { width: 95, height: 48, marginLeft: 62 },
   },
 };
 
