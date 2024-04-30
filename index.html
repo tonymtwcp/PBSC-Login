@@ -6,25 +6,177 @@
   <meta charset="utf-8" />
   <meta name="viewport"
     content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
-  <link href="./login.css" rel="stylesheet" />
 </head>
 
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+  }
+
+  body {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .login-page {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    touch-action: pan-y;
+    display: flex;
+    align-items: end;
+  }
+
+  .myPic {
+    object-fit: cover;
+    object-position: bottom right;
+    min-height: 100%;
+    min-width: 100%;
+  }
+
+  .myLogin {
+    /* background: rgba(0, 0, 0, 0.5); */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform-origin: bottom right;
+  }
+
+  .form-container {
+    display: flex;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .input-field {
+    background: transparent;
+    border-radius: 0;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    box-shadow: none;
+    font-weight: 600;
+  }
+
+  .input-field:focus {
+    outline: none;
+  }
+
+  .input-field:hover {
+    border-bottom: 3px solid #000;
+  }
+
+  .btnLogin {
+    background: rgba(255, 0, 0, 0.5);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+
 <body>
-  <div class="login-page">
-    <img id="bg-img" class="bg-img" src="./images/PBSC-169.jpg" />
-    <form id="login-form" class="login-form">
+  <form class="login-page">
+    <img id="myPic" class="myPic" src="./images/1868x934-ImgMode-2024-0501.jpg" />
+
+    <div id="myLogin" class="myLogin">
       <div class="form-container">
         <div id="input-container" class="input-container">
           <input type="text" id="account-input" class="input-field" spellcheck="false" />
           <input type="password" id="password-input" class="input-field" />
         </div>
-        <button id="login-btn" class="login-btn"></button>
+        <button id="btnLogin" class="btnLogin"></button>
       </div>
-    </form>
-    <div id="error-message" class="error-message"></div>
-  </div>
+    </div>
+  </form>
 
-  <script src="./login.js"></script>
+  <script>
+    const IMAGE_169 = "./images/1868x934-ImgMode-2024-0501.jpg";
+    const IMAGE_43 = "./images/1400x934-ImgMode-2024-0501.jpg";
+
+    const formStyles = {
+      [IMAGE_169]: {
+        myLoginStyle: { width: 448, height: 170 },
+        inputContainerStyle: { height: 87 },
+        inputFieldStyle: { width: 141, height: 35 },
+        loginBtnStyle: { width: 105, height: 86, marginLeft: 20 },
+      },
+      [IMAGE_43]: {
+        myLoginStyle: { width: 336, height: 170 },
+        inputContainerStyle: { height: 87 },
+        inputFieldStyle: { width: 106, height: 35 },
+        loginBtnStyle: { width: 80, height: 86, marginLeft: 16 },
+      },
+    };
+
+    const initialize = () => {
+      const myPic = document.querySelector("#myPic");
+      const myLogin = document.querySelector("#myLogin");
+      const inputContainer = document.querySelector("#input-container");
+      const inputFields = document.querySelectorAll(".input-field");
+      const loginBtn = document.querySelector("#btnLogin");
+
+      const setFormStyle = (imageSrc, imageRatio) => {
+        const formStyle = formStyles[imageSrc];
+        if (formStyle) {
+          const {
+            myLoginStyle,
+            inputContainerStyle,
+            inputFieldStyle,
+            loginBtnStyle,
+          } = formStyle;
+
+          myLogin.style.transform = `scale(${imageRatio})`;
+          myLogin.style.width = `${myLoginStyle.width}px`;
+          myLogin.style.height = `${myLoginStyle.height}px`;
+
+          inputContainer.style.height = `${inputContainerStyle.height}px`;
+          inputFields.forEach((inputField) => {
+            inputField.style.width = `${inputFieldStyle.width}px`;
+            inputField.style.height = `${inputFieldStyle.height}px`;
+          });
+
+          loginBtn.style.width = `${loginBtnStyle.width}px`;
+          loginBtn.style.height = `${loginBtnStyle.height}px`;
+          loginBtn.style.marginLeft = `${loginBtnStyle.marginLeft}px`;
+        }
+      };
+
+      const handleResize = () => {
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+        const screenRatio = screenWidth / screenHeight;
+
+        const imageSrc =
+          screenRatio > 1.9 || screenRatio < 1 ? IMAGE_169 : IMAGE_43;
+        myPic.src = imageSrc;
+
+        myPic.onload = () => {
+          const scrollHeight = document.documentElement.scrollHeight;
+          const imageWidth = myPic.naturalWidth;
+          const imageHeight = myPic.naturalHeight;
+
+          const shouldUseMin = scrollHeight > screenHeight;
+          const imageRatio = shouldUseMin
+            ? Math.min(screenWidth / imageWidth, scrollHeight / imageHeight)
+            : Math.max(screenWidth / imageWidth, scrollHeight / imageHeight);
+
+          setFormStyle(imageSrc, imageRatio);
+        };
+      };
+
+      handleResize();
+      window.addEventListener("resize", handleResize);
+      window.addEventListener("orientationchange", handleResize);
+    };
+
+    window.addEventListener("load", initialize);
+
+  </script>
 </body>
 
 </html>
