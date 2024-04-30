@@ -9,6 +9,10 @@
 </head>
 
 <style>
+  :root {
+    --doc-height: 100%;
+  }
+
   * {
     box-sizing: border-box;
     font-family: "Arial", sans-serif;
@@ -21,6 +25,7 @@
 
   .login-page {
     height: 100vh;
+    height: var(--doc-height);
     position: relative;
     overflow-x: hidden;
     touch-action: pan-y;
