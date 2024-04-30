@@ -172,6 +172,11 @@
 
           setFormStyle(imageSrc, imageRatio);
         };
+
+        document.documentElement.style.setProperty(
+          "--doc-height",
+          `${screenHeight}px`
+        );
       };
 
       handleResize();
