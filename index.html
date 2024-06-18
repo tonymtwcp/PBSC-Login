@@ -31,26 +31,28 @@
     /* overflow: hidden; */
     touch-action: pan-y;
     display: flex;
-    align-items: end;
+    align-items: start;
   }
 
   .myPic {
     object-fit: cover;
-    object-position: bottom right;
+    object-position: top left;
     min-height: 100%;
     min-width: 100%;
   }
 
   .myLogin {
-    /* background: rgba(0, 0, 0, 0.5); */
+    background: rgba(0, 0, 0, 0.5);
     position: absolute;
-    bottom: 0;
-    right: 0;
-    transform-origin: bottom right;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
   }
 
   .form-container {
-    /* display: flex; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 
   .input-container {
@@ -60,11 +62,11 @@
   }
 
   .input-field {
-    background: transparent;
+    /* background: transparent; */
     border-radius: 0;
     text-align: center;
     border: none;
-    font-size: 20px;
+    font-size: 18px;
     box-shadow: none;
     font-weight: 600;
   }
@@ -79,7 +81,7 @@
 
   .btnLogin {
     background: rgba(255, 0, 0, 0.5);
-    background: transparent;
+    /* background: transparent; */
     border: none;
     cursor: pointer;
   }
@@ -106,7 +108,7 @@
 
 <body>
   <form class="login-page">
-    <img id="myPic" class="myPic" src="./images/1868x934-ImgMode-2024-0601.jpg" />
+    <img id="myPic" class="myPic" src="./images/1868x934-ImgMode-2024-0701.jpg" />
 
     <div id="myLogin" class="myLogin">
       <div class="form-container">
@@ -123,23 +125,23 @@
   </form>
 
   <script>
-    const IMAGE_169 = "./images/1868x934-ImgMode-2024-0601.jpg";
-    const IMAGE_43 = "./images/1400x934-ImgMode-2024-0601.jpg";
+    const IMAGE_169 = "./images/1868x934-ImgMode-2024-0701.jpg";
+    const IMAGE_43 = "./images/1400x934-ImgMode-2024-0701.jpg";
 
     const formStyles = {
       [IMAGE_169]: {
-        myLoginStyle: { width: 340, height: 177 },
-        inputContainerStyle: { height: 125 },
-        inputFieldStyle: { width: 284, height: 40 },
-        passwordEyeStyle: { right: 58 },
-        loginBtnStyle: { width: 80, height: 47, marginLeft: 213 },
+        myLoginStyle: { width: 307, height: 427 },
+        inputContainerStyle: { height: 115 },
+        inputFieldStyle: { width: 194, height: 35 },
+        passwordEyeStyle: { right: 0 },
+        loginBtnStyle: { width: 112, height: 42, marginLeft: 37, marginTop: 17 },
       },
       [IMAGE_43]: {
-        myLoginStyle: { width: 255, height: 177 },
-        inputContainerStyle: { height: 125 },
-        inputFieldStyle: { width: 213, height: 40 },
-        passwordEyeStyle: { right: 44 },
-        loginBtnStyle: { width: 60, height: 47, marginLeft: 160 },
+        myLoginStyle: { width: 230, height: 427 },
+        inputContainerStyle: { height: 115 },
+        inputFieldStyle: { width: 145, height: 35 },
+        passwordEyeStyle: { right: 0 },
+        loginBtnStyle: { width: 85, height: 42, marginLeft: 27, marginTop: 17 },
       },
     };
 
@@ -202,6 +204,7 @@
           loginBtn.style.width = `${loginBtnStyle.width}px`;
           loginBtn.style.height = `${loginBtnStyle.height}px`;
           loginBtn.style.marginLeft = `${loginBtnStyle.marginLeft}px`;
+          loginBtn.style.marginTop = `${loginBtnStyle.marginTop}px`;
         }
       };
 
