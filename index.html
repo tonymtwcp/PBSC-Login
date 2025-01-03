@@ -31,28 +31,26 @@
     /* overflow: hidden; */
     touch-action: pan-y;
     display: flex;
-    align-items: start;
+    align-items: end;
   }
 
   .myPic {
     object-fit: cover;
-    object-position: top left;
+    object-position: bottom right;
     min-height: 100%;
     min-width: 100%;
   }
 
   .myLogin {
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform-origin: top left;
-  }
-
-  .form-container {
+    /* background: rgba(0, 0, 0, 0.5); */
     position: absolute;
     bottom: 0;
     right: 0;
+    transform-origin: bottom right;
+  }
+
+  .form-container {
+    display: flex;
   }
 
   .input-container {
@@ -62,7 +60,7 @@
   }
 
   .input-field {
-    /* background: transparent; */
+    background: transparent;
     border-radius: 0;
     text-align: center;
     border: none;
@@ -76,12 +74,12 @@
   }
 
   .input-field:hover {
-    border-bottom: 3px solid #000;
+    border-bottom: 3px solid #000000;
   }
 
   .btnLogin {
     background: rgba(255, 0, 0, 0.5);
-    /* background: transparent; */
+    background: transparent;
     border: none;
     cursor: pointer;
   }
@@ -98,7 +96,7 @@
   }
 
   .password-eye i {
-    font-size: 16px;
+    font-size: 14px;
     color: #414141;
     transition: color 0.3s ease-in-out;
     width: 100%;
@@ -108,7 +106,7 @@
 
 <body>
   <form class="login-page">
-    <img id="myPic" class="myPic" src="./images/1868x934-ImgMode-2024-0701.jpg" />
+    <img id="myPic" class="myPic" src="./images/1868x934-ImgMode-2025-0101.jpg" />
 
     <div id="myLogin" class="myLogin">
       <div class="form-container">
@@ -125,23 +123,23 @@
   </form>
 
   <script>
-    const IMAGE_169 = "./images/1868x934-ImgMode-2024-0701.jpg";
-    const IMAGE_43 = "./images/1400x934-ImgMode-2024-0701.jpg";
+    const IMAGE_169 = "./images/1868x934-ImgMode-2025-0101.jpg";
+    const IMAGE_43 = "./images/1400x934-ImgMode-2025-0101.jpg";
 
     const formStyles = {
       [IMAGE_169]: {
-        myLoginStyle: { width: 307, height: 429 },
-        inputContainerStyle: { height: 115 },
-        inputFieldStyle: { width: 194, height: 35 },
+        myLoginStyle: { width: 559, height: 466 },
+        inputContainerStyle: { width: 220, height: 101 },
+        inputFieldStyle: { width: 220, height: 30 },
         passwordEyeStyle: { right: 0 },
-        loginBtnStyle: { width: 112, height: 42, marginLeft: 37, marginTop: 17 },
+        loginBtnStyle: { width: 100, height: 45, marginLeft: 17, marginTop: 30 },
       },
       [IMAGE_43]: {
-        myLoginStyle: { width: 230, height: 429 },
-        inputContainerStyle: { height: 115 },
-        inputFieldStyle: { width: 145, height: 35 },
+        myLoginStyle: { width: 406, height: 466 },
+        inputContainerStyle: { width: 157, height: 101 },
+        inputFieldStyle: { width: 157, height: 30 },
         passwordEyeStyle: { right: 0 },
-        loginBtnStyle: { width: 85, height: 42, marginLeft: 27, marginTop: 17 },
+        loginBtnStyle: { width: 70, height: 45, marginLeft: 16, marginTop: 30 },
       },
     };
 
@@ -194,6 +192,7 @@
           myLogin.style.height = `${myLoginStyle.height}px`;
 
           inputContainer.style.height = `${inputContainerStyle.height}px`;
+          inputContainer.style.width = `${inputContainerStyle.width}px`;
           inputFields.forEach((inputField) => {
             inputField.style.width = `${inputFieldStyle.width}px`;
             inputField.style.height = `${inputFieldStyle.height}px`;
